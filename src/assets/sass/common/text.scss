@@ -1,0 +1,106 @@
+@import '../global';
+
+// 文字对齐
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.text-decoration-underline {
+  text-decoration: underline;
+}
+
+// 字体大小
+.fz-10 {
+  font-size: px2vw(10);
+}
+
+.fz-12 {
+  font-size: px2vw(12);
+}
+
+.fz-13 {
+  font-size: px2vw(13);
+}
+
+.fz-14 {
+  font-size: px2vw(14);
+}
+
+.fz-15 {
+  font-size: px2vw(15);
+}
+
+.fz-16 {
+  font-size: px2vw(16);
+}
+
+.fz-17 {
+  font-size: px2vw(17);
+}
+
+.fz-18 {
+  font-size: px2vw(18);
+}
+
+.fz-20 {
+  font-size: px2vw(20);
+}
+
+.fz-22 {
+  font-size: px2vw(22);
+}
+
+.fz-24 {
+  font-size: px2vw(24);
+}
+
+.fz-26 {
+  font-size: px2vw(26);
+}
+
+.fz-32 {
+  font-size: px2vw(32);
+}
+
+.fz-36 {
+  font-size: px2vw(36);
+}
+
+.fz-40 {
+  font-size: px2vw(40);
+}
+
+.font-weight-normal {
+  font-weight: normal;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+// 文字加粗
+.font-bold {
+  font-weight: bold;
+}
+
+.nowrap {
+  white-space: nowrap
+}
+
+.text-overflow-hidden {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

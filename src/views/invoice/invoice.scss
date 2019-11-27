@@ -1,0 +1,76 @@
+@mixin invoice {
+  background-color: #fff;
+
+  section {
+    margin-bottom: 5vw;
+
+    h2 {
+      font-size: px2vw(16);
+      color: $color-dark;
+      margin-bottom: 2vw;
+      font-weight: bold;
+    }
+  }
+
+  .invoice-info {
+    .form {
+      margin-top: 2vw;
+    }
+  }
+
+  .select-box {
+    display: flex;
+
+    .select-item {
+      width: px2vw(110);
+      height: px2vw(30);
+      // line-height: px2vw(30);
+      text-align: center;
+      background: #fff;
+      font-size: px2vw(14);
+      border: 1px solid #e6e6e6;
+      border-radius: 2px;
+      margin-right: 3vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &.active {
+        @include main-bg;
+        color: #fff;
+        border: 0;
+      }
+    }
+  }
+
+  .mint-field {
+    border-bottom: 1px solid #e6e6e6;
+    min-height: px2vw(38);
+
+    .mint-cell-wrapper {
+      padding: 0;
+      font-size: px2vw(13);
+    }
+  }
+
+  .invoice-money {
+    .mint-cell-value {
+      position: relative;
+    }
+
+    .mint-field-other {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .invoice-content {
+    input {
+      color: $color-gray-light;
+    }
+  }
+}

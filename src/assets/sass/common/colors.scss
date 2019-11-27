@@ -1,0 +1,53 @@
+@import '../global';
+
+// #fdd000
+.bg-main{
+  @include main-bg;
+}
+
+.bg-gray{
+  background-color: $color-bg;
+}
+
+.bg-white{
+  background-color: #fff;
+}
+
+.bg-dark{
+  background-color: $color-dark;
+}
+
+.bg-transparent{
+  background-color: transparent;
+}
+
+.bg-mask{
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.color-main{
+  color: $color-main;
+}
+
+// #3d3d3d
+.color-dark{
+  color: $color-dark;
+}
+
+// #999
+.color-gray{
+  color: $color-gray;
+}
+
+// #a1a1a1
+.color-gray-light{
+  color: $color-gray-light;
+}
+
+.color-white{
+  color: #fff;
+}
+
+.color-black{
+  color: #000;
+}

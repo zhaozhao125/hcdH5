@@ -1,0 +1,227 @@
+@import './global';
+@import './common/text';
+@import './common/layout';
+@import './common/colors';
+@import './common/display';
+/* 路由切换动画 */
+
+.router {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: auto; // background-color: #E9ECF3;
+  background-color: $color-bg;
+  box-shadow: 0 0 3px #aaa;
+  transition: all .2s ease-out;
+  -webkit-overflow-scrolling: touch;
+}
+
+.slide-left-enter {
+  // opacity: 0.5;
+  -webkit-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+  z-index: 99;
+}
+
+.slide-right-leave-active {
+  // opacity: 0;
+  -webkit-transform: translate(5%, 0);
+  transform: translate(5%, 0);
+}
+
+.slide-right-enter {
+  // opacity: 0.5;
+  -webkit-transform: translate(-100%, 0);
+  transform: translate(-100% 0);
+  z-index: 99;
+}
+
+.slide-left-leave-active {
+  // opacity: 0;
+  -webkit-transform: translate(-5%, 0);
+  transform: translate(-5% 0);
+}
+
+/* 通用样式 */
+
+// 带阴影的容器
+.shadow-box {
+  box-shadow: 0 0px 7px 4px rgba(217, 226, 233, 0.5);
+  background-color: $color-bg;
+  border-radius: 2.13333vw;
+}
+
+// 底部阴影
+.bottom-shadow {
+  box-shadow: 0 5px 12px 0 rgba(217, 226, 233, 0.5);
+}
+
+// 链接后的箭头
+.has-arrow {
+  position: relative;
+  padding-right: 0.5vw !important;
+
+  &:after {
+    border: 2px solid #c8c8cd;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    content: " "; // top: 50%;
+    // right: 0;
+    // position: absolute;
+    width: 2vw;
+    height: 2vw;
+    display: inline-block;
+    margin-left: 1vw;
+    vertical-align: bottom;
+    vertical-align: -webkit-baseline-middle;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &.dark-arrow {
+    &:after {
+      border-color: $color-dark;
+    }
+  }
+}
+
+// toast成功图标
+.pay-success-icon {
+  background-image: url('~@/assets/img/success.png');
+  width: 50px;
+  height: 50px;
+  margin: -10px auto 0;
+  background-size: contain;
+}
+
+// 左右带线的标题
+.title-with-line {
+  font-size: 3.7333vw;
+  color: #a1a1a1;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  padding: 0 3vw;
+  align-items: center;
+
+  span {
+    display: inline-block;
+    padding: 0 3vw;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    height: 1px;
+    background-color: #d5d5d5;
+    flex: 1;
+  }
+}
+
+// 页面底部logo图片
+.bottom-logo {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  height: 8vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-image: url('~@/assets/img/logo.png');
+}
+
+.common-loading {
+  text-align: center;
+  padding: 2vw;
+
+  >span {
+    display: inline-block;
+  }
+}
+
+body .bottom-button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 95% !important;
+  margin: auto;
+  bottom: 3vw;
+}
+
+.checkbox {
+  .checkbox-core {
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 100%;
+    border: 1px solid #ccc;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+
+    &::after {
+      border: 2px solid transparent;
+      border-left: 0;
+      border-top: 0;
+      content: " ";
+      top: 3px;
+      left: 6px;
+      position: absolute;
+      width: 4px;
+      height: 8px;
+      -webkit-transform: rotate(45deg) scale(0);
+      transform: rotate(45deg) scale(0);
+      -webkit-transition: -webkit-transform .2s;
+      transition: -webkit-transform .2s;
+      transition: transform .2s;
+      transition: transform .2s, -webkit-transform .2s;
+    }
+  }
+
+  &.checked {
+    .checkbox-core {
+      background-color: $color-main;
+      border-color: $color-main;
+
+      &::after {
+        border-color: #fff;
+        -webkit-transform: rotate(45deg) scale(1);
+        transform: rotate(45deg) scale(1);
+      }
+    }
+  }
+
+  &.reverse{
+    &.checked {
+      .checkbox-core {
+        background-color: #fff;
+        &::after {
+          border-color: $color-main;
+        }
+      }
+    }
+  }
+}
+
+.no-data{
+  margin-top: 30vw;
+  text-align: center;
+  color: $color-gray-light;
+  font-size: px2vw(14);
+  img{
+    width: px2vw(90);
+    margin-bottom: 2vw;
+  }
+}
+
+.agreement{
+  h2{
+    margin-top: 4vw;
+    margin-bottom: 1vw;
+  }
+  p{
+    margin-bottom: 1vw;
+  }
+}

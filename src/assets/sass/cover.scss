@@ -1,0 +1,115 @@
+// 覆盖mint-ui默认样式
+@import './global';
+body {
+  // 按钮
+  .mint-button{
+    border-radius: 100px;
+    &.mint-button--primary{
+      @include main-bg;
+      background-color: transparent;
+    }
+    &.mint-button--large{
+      height: px2vw(49);
+      font-size: px2vw(17);
+    }
+    &.mint-button--small{
+      height: px2vw(30);
+      padding: 0 px2vw(16);
+    }
+    &.is-disabled{
+      background: #D8D8D8;
+      color: #fff;
+    }
+  }
+  // 对话框
+  .mint-msgbox {
+    border-radius: 12px;
+    background-color: rgba(252, 252, 252, 0.95);
+    width: 78%;
+    // .mint-msgbox-header {
+    //   display: none;
+    // }
+    .mint-msgbox-content {
+      // padding: 30px 25px 25px;
+      .mint-msgbox-input {
+        margin-bottom: -15px;
+      }
+    }
+    .mint-msgbox-message {
+      font-size: 14px;
+      color: $color-dark;
+      line-height: 20px; // text-align: left;
+    }
+    .mint-msgbox-btns {
+      height: 45px;
+    }
+    .mint-msgbox-btn {
+      font-size: 16px;
+      background-color: transparent;
+    }
+    .mint-msgbox-cancel {
+      color: $color-dark;
+    }
+    .mint-msgbox-confirm {
+      color: $color-dark;
+      font-weight: bold;
+      &:active {
+        color: darken($color-dark, 3%);
+      }
+    }
+  }
+
+
+  .mint-toast {
+    background-color: RGBA(96, 96, 96, 0.8);
+    border-radius: 8px;
+  }
+
+
+  .mint-radio-input:checked+.mint-radio-core {
+    background-color: $color-main;
+    border-color: $color-main;
+  }
+
+  
+  .mint-navbar {
+    .mint-tab-item {
+      margin: 0 2vw;
+      padding: 3vw 0;
+      &.is-selected {
+        border-bottom: 3px solid $color-main;
+        color: $color-main;
+      }
+    }
+    .mint-tab-item-label {
+      font-size: 3.6vw;
+    }
+  }
+
+  // 单选按钮
+  .mint-radiolist-label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .mint-radio{
+    order: 2;
+  }
+  .mint-radio-label{
+    order: 1;
+  }
+
+  .mint-cell{
+    border-bottom: 1px solid #EFEFEF;
+    min-height: 60px;
+    // &:last-of-type{
+    //   border: 0;
+    // }
+    .mint-cell-wrapper{
+      background-image: none;
+    }
+    &:last-child{
+      background-image: none;
+    }
+  }
+}

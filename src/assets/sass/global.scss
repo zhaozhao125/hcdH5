@@ -1,0 +1,17 @@
+$color-bg: #F9F9F9; // 背景色
+$color-dark: #262626;
+$color-main: #00C6CA ;
+$color-white: #fff;
+$color-gray: #7C7C7C;
+$color-gray-light: #BBB9BA;
+
+@mixin main-bg {
+  background-image: linear-gradient(-90deg, #00C6CA 0%, #1CDF98 100%);
+}
+
+@function px2vw($px) {
+  @return $px / (375/100) + vw;
+}
+@function vw($px) {
+  @return px2vw($px);
+}
